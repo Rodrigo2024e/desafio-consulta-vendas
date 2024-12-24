@@ -11,16 +11,16 @@ public class SaleSellerMinDTO {
 	private LocalDate data;
 	private double amount;
 	
-	private SellerMinDTO seller;
+	private SellerMinDTO sellerName;
 	
 	public SaleSellerMinDTO() {
 	}
 
-	public SaleSellerMinDTO(Long id, LocalDate data, double amount, SellerMinDTO seller) {
+	public SaleSellerMinDTO(Long id, LocalDate data, double amount, SellerMinDTO sellerName) {
 		this.id = id;
 		this.data = data;
 		this.amount = amount;
-		this.seller = seller;
+		this.sellerName = sellerName;
 	}
 
 
@@ -28,7 +28,7 @@ public class SaleSellerMinDTO {
 		id = entity.getId();
 		data = entity.getDate();
 		amount = entity.getAmount();
-		seller = new SellerMinDTO (entity.getSeller());
+		sellerName = new SellerMinDTO (entity.getSeller());
 	}
 
 	public Long getId() {
@@ -56,11 +56,11 @@ public class SaleSellerMinDTO {
 	}
 
 	public SellerMinDTO getSeller() {
-		return seller;
+		return sellerName;
 	}
 
 	public void setSeller(SellerMinDTO seller) {
-		this.seller = seller;
+		this.sellerName = seller;
 	}
 	
 	
